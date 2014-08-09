@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shashi.android.androidutility"
+    android:versionCode="6"
+    android:versionName="1.2.1" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+   <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Used to avoid sending an ad request if there is no connectivity. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> 
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/pc_launcher"
+        android:label="@string/convert"
+        android:theme="@style/CustomTheme">     
+        <activity
+            android:name="com.shashi.android.androidutility.ListMobileActivity"
+            android:label="@string/app_name" >
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         <activity
+              android:name="com.shashi.android.androidutility.MainActivityTemperature"
+              android:label="@string/app_name_temp"
+              android:parentActivityName="com.shashi.android.androidutility.ListMobileActivity" >>
+               <meta-data
+            		android:name="android.support.PARENT_ACTIVITY"
+            		android:value="com.shashi.android.androidutility.ListMobileActivity" />
+         </activity>
+         <activity
+              android:name="com.shashi.android.androidutility.MainActivityLength"
+              android:label="@string/app_name_length"
+              android:parentActivityName="com.shashi.android.androidutility.ListMobileActivity" >>
+               <meta-data
+            		android:name="android.support.PARENT_ACTIVITY"
+            		android:value="com.shashi.android.androidutility.ListMobileActivity" />
+         </activity>
+         <activity
+              android:name="com.shashi.android.androidutility.MainActivityStorage"
+              android:label="@string/app_name_storage"
+              android:parentActivityName="com.shashi.android.androidutility.ListMobileActivity" >
+               <meta-data
+            		android:name="android.support.PARENT_ACTIVITY"
+            		android:value="com.shashi.android.androidutility.ListMobileActivity" />         
+         </activity>
+         <activity
+              android:name="com.shashi.android.androidutility.MainActivityArea"
+              android:label="@string/app_name_area" 
+			  android:parentActivityName="com.shashi.android.androidutility.ListMobileActivity" >>
+               <meta-data
+            		android:name="android.support.PARENT_ACTIVITY"
+            		android:value="com.shashi.android.androidutility.ListMobileActivity" />
+         </activity>
+         <activity
+              android:name="com.shashi.android.androidutility.MainActivityMass"
+              android:label="@string/app_name_mass" 
+              android:parentActivityName="com.shashi.android.androidutility.ListMobileActivity" >>
+               <meta-data
+            		android:name="android.support.PARENT_ACTIVITY"
+            		android:value="com.shashi.android.androidutility.ListMobileActivity" />
+         </activity>
+         <activity
+              android:name="com.shashi.android.androidutility.MainActivitySpeed"
+              android:label="@string/app_name_speed" 
+              android:parentActivityName="com.shashi.android.androidutility.ListMobileActivity" >>
+               <meta-data
+            		android:name="android.support.PARENT_ACTIVITY"
+            		android:value="com.shashi.android.androidutility.ListMobileActivity" />
+         </activity>
+         <activity
+              android:name="com.shashi.android.androidutility.MainActivityCurrency"
+              android:label="@string/app_name_currency" 
+              android:parentActivityName="com.shashi.android.androidutility.ListMobileActivity" >>
+               <meta-data
+            		android:name="android.support.PARENT_ACTIVITY"
+            		android:value="com.shashi.android.androidutility.ListMobileActivity" />
+         </activity>
+         <activity
+              android:name="com.shashi.android.androidutility.About"
+              android:label="@string/app_name_about"
+              android:parentActivityName="com.shashi.android.androidutility.ListMobileActivity" >>
+               <meta-data
+            		android:name="android.support.PARENT_ACTIVITY"
+            		android:value="com.shashi.android.androidutility.ListMobileActivity" />
+         </activity>
+          <activity
+              android:name="com.shashi.android.androidutility.MainActivityGrocery"
+              android:label="@string/app_name_grocery"
+              android:parentActivityName="com.shashi.android.androidutility.ListMobileActivity" >>
+               <meta-data
+            		android:name="android.support.PARENT_ACTIVITY"
+            		android:value="com.shashi.android.androidutility.ListMobileActivity" />
+         </activity>
+         <activity android:name="com.google.ads.AdActivity"
+              android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+    </application>
+
+</manifest>

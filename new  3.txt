@@ -1,0 +1,12 @@
+http://developer.android.com/training/monitoring-device-state/connectivity-monitoring.html
+http://viralpatel.net/blogs/android-internet-connection-status-network-change/
+http://www.androidhive.info/2012/07/android-detect-internet-connection-status/
+http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml
+http://theopentutorials.com/tutorials/android/xml/android-simple-xmlpullparser-tutorial/
+http://www.androidhive.info/2012/02/android-custom-listview-with-image-and-text/
+http://wptrafficanalyzer.in/blog/android-xml-parsing-with-xmlpullparser-and-loading-to-listview-example/
+http://masterinandroid.wordpress.com/2013/10/19/parse-xml-file-using-xmlpullparser/
+http://dynamicsofandroid.blogspot.in/2013/10/xml-parsing-using-xmlpullparser.html
+
+All Imp Tutorials:
+http://www.javacodegeeks.com/tutorials/android-tutorials/android-core-tutorials/

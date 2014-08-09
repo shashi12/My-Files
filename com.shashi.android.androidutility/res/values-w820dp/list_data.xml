@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="unit_conversion">
+        <item>Temperature</item>
+        <item>Length</item>
+        <item>Storage</item>
+        <item>Area</item>
+        <item>Speed</item>
+        <item>Mass</item>
+        <item>Currency</item>
+    </string-array>
+</resources>

@@ -1,0 +1,112 @@
+package com.shashi.android.androidutility;
+
+public class ConverterUtil {
+
+	 // converts to celsius
+	  public static float convertFahrenheitToCelsius(float fahrenheit) {
+	    return ((fahrenheit - 32) * 5 / 9);
+	  }
+
+	  // converts to fahrenheit
+	  public static float convertCelsiusToFahrenheit(float celsius) {
+	    return ((celsius * 9) / 5) + 32;
+	  }
+	
+	  public static float convertKelvinToFahrenheit(float kelvin) {
+		    return (float) ((((kelvin-273.15)* 9) / 5) + 32);
+		  }
+	  public static float convertKelvinToCelsius(float kelvin) {
+		    return (float) (kelvin-273.15);
+		  }
+	  
+	  public static float convertCelsiusToKelvin(float celsius) {
+		    return (float) (celsius +273.15);
+		  }
+	  
+	  public static float convertFahrenheitToKelvin(float fahrenheit) {
+		    return (float) (((fahrenheit - 32) * 5 / 9)+273.15);
+		  }
+	 //Length: kilometer 
+	  public static float convertKilometerToMeter(float kilometer) {
+		    return (float) (kilometer*1000);
+		  }
+	  
+	  public static float convertKilometerTocentiMeter(float kilometer) {
+		    return (float) (kilometer*100000);
+		  }
+	  public static float convertKilometerTomilliMeter(float kilometer) {
+		    return (float) (kilometer*1000000);
+		  }
+	  public static float convertKilometerToMile(float kilometer) {
+		    return (float) (kilometer*0.621371);
+		  }
+	  public static float convertKilometerToYard(float kilometer) {
+		    return (float) (kilometer*1093.61);
+		  }
+	  public static float convertKilometerToFoot(float kilometer) {
+		    return (float) (kilometer*3280.84);
+		  }
+	  public static float convertKilometerToInch(float kilometer) {
+		    return (float) (kilometer*39370.1);
+		  }
+	  public static float convertKilometerToNauticleMile(float kilometer) {
+		    return (float) (kilometer*0.539957);
+		  }
+	  
+	  //Length: Meter 
+	  public static float convertMeterToKilometer(float meter) {
+		    return (float) (meter*0.001);
+		  }
+	  
+	  public static float convertMeterTocentiMeter(float meter) {
+		    return (float) (meter*100);
+		  }
+	  public static float convertMeterTomilliMeter(float meter) {
+		    return (float) (meter*1000);
+		  }
+	  public static float convertMeterToMile(float meter) {
+		    return (float) (meter*0.000621371);
+		  }
+	  public static float convertMeterToYard(float meter) {
+		    return (float) (meter*1.09361);
+		  }
+	  public static float convertMeterToFoot(float meter) {
+		    return (float) (meter*3.28084);
+		  }
+	  public static float convertMeterToInch(float meter) {
+		    return (float) (meter*39.3701);
+		  }
+	  public static float convertMeterToNauticleMile(float meter) {
+		    return (float) (meter*0.000539957);
+		  }
+
+
+	//Length: CentiMeter 
+	  public static float convertCentimeterToKilometer(float centimeter) {
+		    return (float) (centimeter*0.000001);
+		  }
+	  
+	  public static float convertCentimeterTometer(float centimeter) {
+		    return (float) (centimeter*0.01);
+		  }
+	  public static float convertCentimeterTomilliMeter(float centimeter) {
+		    return (float) (centimeter*10);
+		  }
+	  public static float convertCentimeterToMile(float centimeter) {
+		    return (float) (centimeter*0.000621371);
+		  }
+	  public static float convertCentimeterToYard(float centimeter) {
+		    return (float) (centimeter*1.09361);
+		  }
+	  public static float convertCentimeterToFoot(float centimeter) {
+		    return (float) (centimeter*3.28084);
+		  }
+	  public static float convertCentimeteroInch(float centimeter) {
+		    return (float) (centimeter*39.3701);
+		  }
+	  public static float convertCentimeterToNauticleMile(float centimeter) {
+		    return (float) (centimeter*0.000539957);
+		  }
+
+
+}

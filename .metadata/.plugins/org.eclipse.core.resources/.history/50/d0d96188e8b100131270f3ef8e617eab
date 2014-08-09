@@ -1,0 +1,55 @@
+package com.shashi.android.androidutility;
+
+public class ConverterUtil {
+
+	 // converts to celsius
+	  public static float convertFahrenheitToCelsius(float fahrenheit) {
+	    return ((fahrenheit - 32) * 5 / 9);
+	  }
+
+	  // converts to fahrenheit
+	  public static float convertCelsiusToFahrenheit(float celsius) {
+	    return ((celsius * 9) / 5) + 32;
+	  }
+	
+	  public static float convertKelvinToFahrenheit(float kelvin) {
+		    return (float) ((((kelvin-273.15)* 9) / 5) + 32);
+		  }
+	  public static float convertKelvinToCelsius(float kelvin) {
+		    return (float) (kelvin-273.15);
+		  }
+	  
+	  public static float convertCelsiusToKelvin(float celsius) {
+		    return (float) (celsius +273.15);
+		  }
+	  
+	  public static float convertFahrenheitToKelvin(float fahrenheit) {
+		    return (float) (((fahrenheit - 32) * 5 / 9)+273.15);
+		  }
+	 //Length: kilometer 
+	  public static float convertKilometerToMeter(float kilometer) {
+		    return (float) (kilometer*1000);
+		  }
+	  
+	  public static float convertKilometerTocentiMeter(float kilometer) {
+		    return (float) (kilometer*100000);
+		  }
+	  public static float convertKilometerTomilliMeter(float kilometer) {
+		    return (float) (kilometer*1000000);
+		  }
+	  public static float convertKilometerToMile(float kilometer) {
+		    return (float) (kilometer*0.621371);
+		  }
+	  public static float convertKilometerToYard(float kilometer) {
+		    return (float) (kilometer*1000);
+		  }
+	  public static float convertKilometerToFoot(float kilometer) {
+		    return (float) (kilometer*1000);
+		  }
+	  public static float convertKilometerToInch(float kilometer) {
+		    return (float) (kilometer*1000);
+		  }
+	  public static float convertKilometerToNauticleMile(float kilometer) {
+		    return (float) (kilometer*1000);
+		  }
+}

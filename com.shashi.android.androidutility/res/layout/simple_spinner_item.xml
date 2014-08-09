@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="3dp"
+    style="@style/spinnerItemStyle" >
+    
+    <ImageView
+        android:id="@+id/left_pic"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="2dp"
+        android:padding="3dp"
+        />
+
+<TextView 
+          android:id="@+id/spinner_text"
+          android:layout_width="match_parent" 
+          android:layout_height="30dp"
+          android:layout_marginLeft="5dp"
+          android:layout_marginTop="2dp"
+          android:layout_toRightOf="@+id/left_pic"
+          android:textColor="#000000"
+          android:textSize="15sp"
+    	  android:ellipsize="marquee"
+    	  android:gravity="left|center_vertical"/> 
+    	  
+</RelativeLayout>

@@ -1,0 +1,76 @@
+package com.shashi.android.xmlreaderexample;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.List;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserFactory;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+	XmlPullParserFactory factory = null;
+    XmlPullParser parser = null;
+    ListView lv;
+    final String urlString="http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml";
+    String network="Not connected to Internet";
+
+	
+		@Override
+	protected void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		lv=(ListView) findViewById(R.id.list);
+             
+         List<Student> Students = null;
+         
+         XMLPullParserHandler parser = new XMLPullParserHandler();
+            
+            network=NetworkUtil.getConnectivityStatusString(getApplicationContext());
+            if(network!="Not connected to Internet"){         	
+				try {
+					Toast.makeText(this, "Connected To Internet",Toast.LENGTH_LONG).show();
+					Toast.makeText(this, network,Toast.LENGTH_LONG).show();
+					Students=  parser.fetchXML(urlString);   	 	
+					Toast.makeText(this, "Success",Toast.LENGTH_LONG).show();
+					
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+        	 	
+            }else {
+           	   	try {
+           	   		Toast.makeText(this, "Not Connected To Internet",Toast.LENGTH_LONG).show();
+					Students =  parser.parse(getAssets().open("eurofxref-daily.xml"));
+					Toast.makeText(this, "Sucess",Toast.LENGTH_LONG).show();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+            }
+            
+            ArrayAdapter<Student> adapter =
+				    new ArrayAdapter<Student>(this,R.layout.list_item, Students);
+				   lv.setAdapter(adapter);
+			  
+           
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	
+	}
+
+}

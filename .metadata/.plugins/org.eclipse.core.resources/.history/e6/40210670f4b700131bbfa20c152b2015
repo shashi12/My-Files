@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">Measurement Conversion Utility</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <color name="myColor">#2B547E</color>
+    <string name="convert">Convert</string>
+    <string name="temperature">Temperature</string>
+    <string name="speed">Speed</string>
+    <string name="celsius">Celsius °C</string>
+    <string name="fahrenheit">Fahrenheit °F</string>
+    <string name="kelvin">Kelvin °K</string>
+    <string name="length">Length</string>
+    <string name="kilometer">Kilometer</string>
+    <string name="meter">Meter</string>
+    <string name="centimeter">Centimeter</string>
+    <string name="millimeter">Millimeter</string>
+    <string name="mile">Mile</string>
+    <string name="yard">Yard</string>
+    <string name="foot">Foot</string>
+    <string name="inch">Inch</string>
+    <string name="nauticle_mile">Nauticle Mile</string>
+    <string name="ad_unit_id">A1532EBF7E91AFE</string>
+    <string name="bit">Bit</string>
+    <string name="byte1">Byte</string>
+    <string name="kilobyte">Kilobyte</string>
+    <string name="megabyte">MegaByte</string>
+    <string name="gigabyte">Gigabyte</string>
+    <string name="terabyte">TeraByte</string>
+    <string name="petabyte">Petabyte</string>
+    <string name="storage">Storage</string>
+    <string name="area">Area</string>
+    <string name="mass">Mass</string>
+    <string name="squarekm">Square_KM</string>
+    <string name="hectare">Hectare</string>
+    <string name="squaremeter">Square_Meter</string>
+    <string name="squaremile">Square_Mile</string>
+    <string name="acre">Acre</string>
+    <string name="squareyard">Square_Yard</string>
+    <string name="squarefoot">Square_Foot</string> 
+    <color name="custom_theme_color">#2B547E</color>
+    <string name="convert_trail">Convert \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 &gt;</string>
+
+</resources>

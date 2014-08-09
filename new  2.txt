@@ -1,0 +1,7 @@
+http://www.nse-india.com/global/content/rssFeed.htm
+
+http://developer.yahoo.com/yql/console/?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22USD%22%2C%20%22USDINR%22)&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys
+
+Yahoo currency converter
+ads:testDevices="FF6E7E12F5BCB7838DAC43CB4C099358"
+

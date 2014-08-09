@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/radial_background"
+    android:gravity="center_horizontal"
+    tools:context="com.shashi.android.androidutility.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+     <RadioGroup
+         android:id="@+id/radioGroup1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/adView"
+         android:layout_alignParentTop="true"
+         android:orientation="vertical" >
+
+         <RadioButton
+             android:id="@+id/radio0"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:layout_weight="1"
+             android:layout_marginBottom="5dp"
+             android:text="@string/temperature"
+             android:gravity="center"
+             android:drawableTop="@drawable/pc_launcher"
+             android:textColor="#2B547E" />
+
+         <View
+             style="@style/Divider" />
+
+         <RadioButton
+             android:id="@+id/radio1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="5dp"
+             android:layout_marginBottom="5dp"
+             android:text="@string/length"
+             android:textColor="#2B547E" />
+
+         <View style="@style/Divider" />
+
+         <RadioButton
+             android:id="@+id/radio2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="5dp"
+             android:layout_marginBottom="5dp"
+             android:text="@string/storage"
+             android:textColor="#2B547E" />
+
+         <View style="@style/Divider" />
+         
+           <RadioButton
+             android:id="@+id/radio3"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="5dp"
+             android:layout_marginBottom="5dp"
+             android:text="@string/area"
+             android:textColor="#2B547E" />
+         <View style="@style/Divider" />
+         <RadioButton
+             android:id="@+id/radio4"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="5dp"
+             android:layout_marginBottom="5dp"
+             android:text="@string/speed"
+             android:textColor="#2B547E" />
+         
+         <View style="@style/Divider" />
+           <RadioButton
+             android:id="@+id/radio5"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="5dp"
+             android:layout_marginBottom="5dp"
+             android:text="@string/mass"
+             android:textColor="#2B547E" />   
+         <View style="@style/Divider" />  
+     </RadioGroup>
+     
+    
+     <Button
+         android:id="@+id/button1"
+         style="@style/ButtonText"
+         android:layout_width="wrap_content"
+         android:layout_below="@+id/radioGroup1"
+         android:layout_centerHorizontal="true"
+         android:layout_height="wrap_content"    
+         android:background="@drawable/blue_button"
+         android:onClick="onClick"
+         android:text="@string/convert" />
+
+      <com.google.ads.AdView
+          android:id="@+id/adView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentLeft="true"
+          android:layout_marginBottom="23dp"
+          ads:adSize="BANNER"
+          ads:adUnitId="@string/ad_unit_id"
+          ads:loadAdOnCreate="true"
+           >
+      </com.google.ads.AdView>
+ 
+</RelativeLayout>
