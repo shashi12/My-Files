@@ -14,7 +14,7 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:text="@string/unit" />
-    
+
     <EditText
         android:id="@+id/editText2"
         android:layout_width="80dp"
@@ -24,15 +24,15 @@
         android:ems="10"
         android:inputType="numberSigned|numberDecimal" >
 
-     <requestFocus />
-  </EditText>
-  
+        <requestFocus />
+    </EditText>
+
     <EditText
         android:id="@+id/editText3"
         android:layout_width="65dp"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/spinner1"
         android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/spinner1"
         android:ems="10"
         android:text="@string/price" />
 
@@ -40,8 +40,8 @@
         android:id="@+id/editText4"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-		android:layout_toRightOf="@+id/editText3"
         android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/editText3"
         android:ems="10"
         android:inputType="numberSigned|numberDecimal" />
 
@@ -70,13 +70,13 @@
         android:layout_toRightOf="@+id/editText5"
         android:ems="10"
         android:inputType="numberSigned|numberDecimal" />
-    
+
     <Spinner
         android:id="@+id/spinner2"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_below="@+id/editText4"
+        android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/editText6" />
 
     <Button
@@ -96,5 +96,41 @@
         android:layout_alignLeft="@+id/editText4"
         android:ems="10"
         android:inputType="numberSigned|numberDecimal" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_below="@+id/button1"
+>
+        <TableLayout
+            android:id="@+id/tableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:shrinkColumns="*"
+            android:stretchColumns="*" >
+        </TableLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignRight="@+id/editText3"
+        android:layout_marginRight="28dp"
+        android:text="@string/AddtoBill" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentRight="true"
+        android:text="@string/Update"
+         android:onClick="btn4Listener"/>
 
 </RelativeLayout>

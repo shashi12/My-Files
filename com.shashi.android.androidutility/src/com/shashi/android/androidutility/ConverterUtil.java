@@ -656,7 +656,7 @@ public class ConverterUtil {
 		 public static float convertgmTokg(float gm,float kg,float price ) {
 			    return (float) ((kg*1000*price)/gm);
 			  }
-		 public static float convertkgTogm(float gm,float kg,float price  ) {
+		 public static float convertkgTogm(float kg,float gm,float price  ) {
 			    return (float) ((gm*price)/(kg*1000));
 			  }
 	 

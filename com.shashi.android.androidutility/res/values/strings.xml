@@ -70,9 +70,10 @@
     <string name="download">Download</string>
     <string name="unit">Unit</string>
     <string name="price">Price</string>
+    <string name="Update">Update</string>
     <string name="to">To</string>
     <string name="action_addVehicle">Add Vehicle</string>
-    
+    <string name="AddtoBill">Add To Bill</string>
     <color name="custom_theme_color">#2B547E</color>
     <string name="convert_trail">Convert \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 &gt;</string>
 
