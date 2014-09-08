@@ -96,12 +96,37 @@
         android:layout_alignLeft="@+id/editText4"
         android:ems="10"
         android:inputType="numberSigned|numberDecimal" />
-
+	
+    <EditText
+        android:id="@+id/editText8"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+		android:layout_below="@+id/editText9"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+         />
+    
+      <EditText
+        android:id="@+id/editText9"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+		android:layout_below="@+id/scrollView1"
+        android:ems="10"
+         />
+	 <TableLayout
+            android:id="@+id/tableLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:shrinkColumns="*"
+            android:stretchColumns="*"
+            android:layout_below="@+id/button1" >
+        </TableLayout>
     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="230dp"
-        android:layout_below="@+id/button1"
+        android:layout_below="@+id/tableLayout2"
 >
         <TableLayout
             android:id="@+id/tableLayout1"
@@ -131,6 +156,6 @@
         android:layout_alignBottom="@+id/button2"
         android:layout_alignParentRight="true"
         android:text="@string/Update"
-         android:onClick="btn4Listener"/>
+        android:onClick="btn4Listener"/>
 
 </RelativeLayout>

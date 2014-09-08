@@ -6,6 +6,7 @@ import java.util.List;
 import android.widget.TableRow.LayoutParams;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -29,10 +30,12 @@ public class MainActivityGrocery extends Activity{
 	private EditText text5;
 	private EditText text6;
 	private EditText text7;
+	private EditText text8;
+	private EditText text9;
 	private Spinner spinner01;
 	private Spinner spinner02; 
 	TableLayout table_layout;
-	TableLayout table_layout2;
+	TableLayout table_layout_header;
 	Button btnOk;
 	ProgressDialog PD;
 	Button addBill;
@@ -60,15 +63,19 @@ public class MainActivityGrocery extends Activity{
 		text5.setKeyListener(null);
 		text6 = (EditText) findViewById(R.id.editText6);
 		text7 = (EditText) findViewById(R.id.editText7);
+		text8 = (EditText) findViewById(R.id.editText8);
+		text9 = (EditText) findViewById(R.id.editText9);
 		Button btnOk =(Button) findViewById(R.id.button1);
 		Button addBill =(Button) findViewById(R.id.button2);
 		Button update =(Button) findViewById(R.id.button3);
 		table_layout = (TableLayout) findViewById(R.id.tableLayout1);
+		table_layout_header = (TableLayout) findViewById(R.id.tableLayout2);
 		DatabaseHandler sqlcon=new DatabaseHandler(this);
 	    addItemsOnSpinner();
 	    
-	    update.setClickable(false);
-	    update.setEnabled(false);
+	    text8.setVisibility(View.GONE);
+	    /*update.setClickable(false);
+	    update.setEnabled(false);*/
 	    
 	    btnOk.setOnClickListener(new OnClickListener() {
 
@@ -138,7 +145,7 @@ public class MainActivityGrocery extends Activity{
 	        label_weight1.setPadding(5, 5, 5, 5); // set the padding (if required)
 	        tr_head1.addView(label_weight1); // add the column to the table row here 
 		 
-	        table_layout.addView(tr_head1, new TableLayout.LayoutParams(
+	        table_layout_header.addView(tr_head1, new TableLayout.LayoutParams(
 	                LayoutParams.MATCH_PARENT,
 	                LayoutParams.WRAP_CONTENT));
 		 
@@ -195,8 +202,10 @@ public class MainActivityGrocery extends Activity{
 	                LayoutParams.MATCH_PARENT,
 	                LayoutParams.WRAP_CONTENT));
 		}
-
-        
+		int count=sqlcon1.getGroceryCount();
+		float sum=sqlcon1.sumpriceAll();
+		text9.setText("Total Items : "+Integer.toString(count)+ "Total Bill Value:"+Float.toString(sum));
+		
 	}
 
 	private void setedit_button(final Button btn,final DatabaseHandler sqlcon3, final int i){
@@ -205,7 +214,7 @@ public class MainActivityGrocery extends Activity{
 			public void onClick(View view){
 				try {	
 					Update_Database(sqlcon3,i);
-					
+
 				}catch(Exception e){
 					e.printStackTrace();
 				}
@@ -230,21 +239,29 @@ public class MainActivityGrocery extends Activity{
 		else
 			spinner02.setId(2);
 		text7.setText(String.valueOf(gor.getPrice()));
-		}	
+	    text8.setText(String.valueOf(gor.getID()));
+	}	
 
-	  public void btn4Listener(View v) {
-				try {	
-					float item,price;
-					String unit;
-					item=Float.valueOf(text6.getText().toString());
-					price=Float.valueOf(text7.getText().toString());
-					unit=spinner02.getSelectedItem().toString();  
-					//GorceryDetails grocery=new GorceryDetails(unit,item,price);
-					  int i=sqlcon5.updateGrocery(new GorceryDetails(unit,item,price));
-					  buildTable(sqlcon5);   
-				}catch(Exception e){
-					e.printStackTrace();
-				}
+	
+
+	public void btn4Listener(View v) {
+			try {	
+				float item,price;
+				String unit;
+				int id;
+				id=Integer.valueOf(text8.getText().toString());
+				item=Float.valueOf(text6.getText().toString());
+				price=Float.valueOf(text7.getText().toString());
+				unit=spinner02.getSelectedItem().toString();  
+				GorceryDetails gor1=new GorceryDetails(id,unit,item,price);
+				DatabaseHandler sqlcon1=new DatabaseHandler(this);
+				
+				//GorceryDetails grocery=new GorceryDetails(unit,item,price);
+				  int i=sqlcon1.updateGrocery(gor1);
+				  buildTable(sqlcon1);   
+			}catch(Exception e){
+				e.printStackTrace();
+			}
 			}		
 		
 

@@ -151,4 +151,25 @@ public List<GorceryDetails> getAllGrocery() {
 		// return count
 
 	}
+	
+	public float sumpriceAll(){
+
+		 float columntotal = 0;
+		 String sumQuery="SELECT SUM("+Float.parseFloat(KEY_PRICE)+") FROM TABLE_GROCERY";
+		 SQLiteDatabase db = this.getReadableDatabase();
+		 Cursor cursor1 = db.rawQuery( sumQuery , null);
+		    //   if(cursor1.moveToFirst()) {
+		     //    columntotal = Float.parseFloat(cursor1.getString(0));
+		  //   }
+		 if(cursor1 != null && !cursor1.isClosed()){
+			 int count = cursor1.getCount();
+			        cursor1.close();
+			    }        
+
+		// String  sumtotal = Float.toString((float)columntotal);           
+
+		  return columntotal;
+
+		 }
+	
 }
